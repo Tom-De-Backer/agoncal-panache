@@ -5,7 +5,7 @@ import io.quarkus.test.junit.QuarkusTest;
 import org.agoncal.quarkus.jpa.Customer;
 import org.junit.jupiter.api.Test;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -2,7 +2,7 @@ package org.agoncal.quarkus.panache.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
-import javax.persistence.Entity;
+import jakarta.persistence.Entity;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
