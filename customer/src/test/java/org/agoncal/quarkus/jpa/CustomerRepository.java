@@ -1,17 +1,16 @@
 package org.agoncal.quarkus.jpa;
 
 import jakarta.enterprise.context.ApplicationScoped;
-
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 
-
 @ApplicationScoped
 public class CustomerRepository {
+
     @Inject
     EntityManager em;
 
-    public void persist(Customer customer) {
+    public void persist(Customer customer)  {
         em.persist(customer);
     }
 
