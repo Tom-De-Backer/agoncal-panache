@@ -1,5 +1,6 @@
 package org.agoncal.quarkus.jpa;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -7,9 +8,9 @@ import jakarta.persistence.Id;
 import java.time.Instant;
 
 @Entity
-public class Customer {
-    @Id
-    @GeneratedValue
+public class Customer extends PanacheEntity {
+//    @Id
+//    @GeneratedValue
     public Long id;
 
     public String firstName;
