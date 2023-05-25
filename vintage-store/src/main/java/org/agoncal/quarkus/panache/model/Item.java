@@ -2,6 +2,7 @@ package org.agoncal.quarkus.panache.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.*;
+import org.agoncal.quarkus.jdbc.Artist;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -21,4 +22,8 @@ public class Item extends PanacheEntity {
 
     @Column(name = "created_date", nullable = false)
     public Instant createdDate = Instant.now();
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "artist_fk")
+    public Artist artist;
 }
