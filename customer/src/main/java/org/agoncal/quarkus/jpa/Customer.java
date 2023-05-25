@@ -1,21 +1,27 @@
 package org.agoncal.quarkus.jpa;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 
 @Entity
+@Table(name = "t_customers")
 public class Customer {
     @Id
     @GeneratedValue
     public Long id;
 
-    public String firstName;
-    public String lastName;
-    public String email;
-    public Instant createdDate = Instant.now();
+    @Column(name = "first_name", length = 50, nullable = false)
+    private String firstName;
+
+    @Column(name = "last_name", length = 50, nullable = false)
+    private String lastName;
+
+    @Column(name = "e_mail", nullable = false)
+    private String email;
+
+    @Column(name = "created_date", nullable = false)
+    private Instant createdDate = Instant.now();
 
     public Customer() {}
 
