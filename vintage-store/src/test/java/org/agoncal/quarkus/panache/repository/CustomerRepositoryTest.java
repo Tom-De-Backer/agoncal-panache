@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Test;
 import jakarta.inject.Inject;
 import java.sql.SQLException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 public class CustomerRepositoryTest {
@@ -19,6 +18,7 @@ public class CustomerRepositoryTest {
     @Test
     @TestTransaction
     public void shouldCreateAndFindCustomer() throws SQLException {
+        assertTrue(repository.listAllDans().size() <= repository.listAll().size());
         Customer customer = new Customer("first name", "last name", "email");
 
         repository.persist(customer);

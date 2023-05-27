@@ -38,14 +38,14 @@ public class Publisher extends PanacheEntity {
     // ======================================
     // =              Methods               =
     // ======================================
-//
-//    public static List<Publisher> findContainingName(String name) {
-//        return Publisher.list("name like ?1", "%" + name + "%");
-//    }
-//
-//    public static Optional<Publisher> findByName(String name) {
-//        return Publisher.find("name", name).firstResultOptional();
-//    }
+
+    public static List<Publisher> findContainingName(String name) {
+        return Publisher.list("name like ?1", "%" + name + "%");
+    }
+
+    public static Optional<Publisher> findByName(String name) {
+        return Publisher.find("name", name).firstResultOptional();
+    }
 
     @Override
     public String toString() {
