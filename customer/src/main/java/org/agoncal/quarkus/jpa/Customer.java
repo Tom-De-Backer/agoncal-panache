@@ -8,7 +8,7 @@ import java.time.Instant;
 @Table(name = "t_customers")
 public class Customer {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     public Long id;
 
     @Column(name = "first_name", length = 50, nullable = false)
